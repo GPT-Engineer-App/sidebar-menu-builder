@@ -34,8 +34,8 @@ const Index = () => {
   };
 
   return (
-    <Flex>
-      <Box width="20%" bg="gray.800" p={4} color="white">
+    <Flex direction={{ base: "column", md: "row" }}>
+      <Box width={{ base: "100%", md: "20%" }} bg="gray.800" p={{ base: 2, md: 4 }} color="white">
         <Accordion allowToggle index={activeSection === "análise" ? 0 : activeSection === "conclusão" ? 1 : -1}>
           <AccordionItem>
             <AccordionButton>
@@ -87,9 +87,9 @@ const Index = () => {
         </Accordion>
         <IconButton icon={<FaPlus />} variant="outline" colorScheme="white" size="sm" mt={4} />
       </Box>
-      <Box width="80%" p={8}>
-        <Flex>
-          <Box width="25%" pr={4}>
+      <Box width={{ base: "100%", md: "80%" }} p={{ base: 4, md: 8 }}>
+        <Flex direction={{ base: "column", md: "row" }}>
+          <Box width={{ base: "100%", md: "25%" }} pr={{ base: 0, md: 4 }} mb={{ base: 8, md: 0 }}>
             <VStack align="stretch" spacing={6}>
               <Box>
                 <Heading as="h4" size="md" mb={2}>
@@ -148,7 +148,7 @@ const Index = () => {
               )}
             </VStack>
           </Box>
-          <Box width="75%">
+          <Box width={{ base: "100%", md: "75%" }}>
             <Flex justify="space-between" mb={4}>
               <Heading as="h2" size="lg">
                 TOMOGRAFIA COMPUTADORIZADA DA COLUNA LOMBAR
